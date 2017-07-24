@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:body>
+        <ui:composition>
+          <ul id="slide-out" class="side-nav">
+            <li><div class="userView">
+              <div class="background blue accent-2">
+              </div>
+              <a href="#!user"><img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Clock_Tower_-_Palace_of_Westminster%2C_London_-_September_2006-2.jpg/1200px-Clock_Tower_-_Palace_of_Westminster%2C_London_-_September_2006-2.jpg"/></a>
+              <a href="#!name"><span class="white-text name">Muhammad Khoirul Anwar</span></a>
+            </div></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                  <li>
+                    <a class="collapsible-header"><i class="material-icons">person_pin</i>Employees<i class="material-icons right">arrow_drop_down_circle</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                           <h:form> 
+                        <li>
+                           
+                            <h:commandLink action = "#{navigationBean.goToEmployeeInfoForm()}" actionListener="#{employeeBean.add}">
+                              <i class="material-icons">person_add</i>New Employee
+                              </h:commandLink>
+                  
+                        </li>
+                        <li>
+                
+                            <h:commandLink action="#{navigationBean.goToEmployeeListForm()}">
+                                      <i class="material-icons">view_list</i>Employee List
+                                  </h:commandLink>
+                            
+                        </li>
+                      </h:form>
+                      </ul>
+                    </div>
+                  </li>
+                    <li>
+                    <a class="collapsible-header"><i class="material-icons">account_balance_wallet</i>Salaries<i class="material-icons right">arrow_drop_down_circle</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                           <h:form> 
+                        <li>
+                           
+                            <h:commandLink action = "#{navigationBean.goToSalaryInfoForm()}" actionListener="#{salaryBean.add}">
+                              <i class="material-icons">add_box</i>Input Employee Salary
+                              </h:commandLink>
+                  
+                        </li>
+                        <li>
+                
+                            <h:commandLink action="#{navigationBean.goToSalaryListForm()}">
+                                      <i class="material-icons">view_list</i>Salary List
+                                  </h:commandLink>
+                            
+                        </li>
+                      </h:form>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+            </li>
+          </ul>
+          
+        </ui:composition>
+    </h:body>
+
+</html>
